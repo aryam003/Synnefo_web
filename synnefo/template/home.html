@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static '/css/login.css' %}"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+         .navbar-brand img {
+            height: 40px; 
+        }
+
+        .nav-link {
+            text-transform: capitalize;
+            margin: 0 10px;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #000;
+        }
+        .container-fluid h1, .container-fluid p {
+          margin: 0;
+        }
+        .custom-section {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            background-color: #fff;
+          }
+          .custom-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fffdfd;
+          }
+          .custom-section .highlight {
+            color: #fff7f7;
+          }
+          .custom-section img {
+            max-width: 100%;
+            height: 500px;
+            /* border-radius: 20px; */
+          }
+          .btn-enquire {
+            background-color: #d0021b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+          }
+          .btn-enquire:hover {
+            background-color: #b00118;
+          }
+          .hero-section {
+            margin-top: 20px;
+            background-color: white; 
+            color: rgb(20, 20, 20);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .hero-content .btn-primary {
+            background-color: #6c63ff;
+            border: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .hero-content .btn-primary:hover {
+            background-color: #5a52e0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+          footer{
+            font-family: FFDINforPuma, Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+          }
+    
+          footer a{
+          text-decoration: none;
+          color: rgb(162, 162, 162);
+          font-size: small;
+          }
+          footer h6{
+          font-weight: bold;
+          }
+          footer  a:hover{
+          color: white;
+          }
+          footer svg:hover{
+              color: white;
+          }
+          footer img{
+          padding: 5px;
+          margin-bottom: 5px;
+          }
+
+        @media (max-width: 576px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top"  style="background-color: rgb(235, 181, 87)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/logo.png' %}" alt="Logo"  style="width: 170px; height: 60px;padding-left: 22%; ">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav ms-auto " >
+                    <li class="nav-item">
+                        <a class="nav-link active" href="" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="placement">Placement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+      <h2 style="text-align: center;font-weight: bold; padding-top: 100px;" >Courses</h2><br>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3"> 
+                  <img src="../media/mernstack.jpg" alt="School Store" class="img-fluid">
+                  <h4 style="font-weight: bold;">Mernstack</h4>
+                  <p>One Stop Shop</p>
+              </div>
+              <div class="col-md-3">
+                  <img src="../media/flutter.jpg" alt="Casual Wear" class="img-fluid">
+                  <h4 style="font-weight: bold;">Flutter</h4>
+                  <p>Wardrobe Staples</p>
+              </div>
+              <div class="col-md-3">
+                  <img src="../media/UIUX.jpg" alt="Softride Shoes" class="img-fluid">
+                  <h4 style="font-weight: bold;">UI UX</h4>
+                  <p>Everyday Comfort</p>
+              </div>
+              <div class="col-md-3">
+                  <img src="../media/DevOps.jpg" alt="Sets" class="img-fluid">
+                  <h4 style="font-weight: bold;">DevOps</h4>
+                  <p>Make A Statement</p>
+              </div>
+          </div>
+
+          <div style="text-align: center;">
+            <a href="courses" class="btn btn-primary">View All</a>
+          </div>
+
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" style="padding-top: 50px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="{% static 'img/carosel.jpg' %}" alt="Los Angeles" class="d-block" style="width: 100%; height: 500px;">
+                  <div class="carousel-caption">
+                      <h3>The Best Learning Platform</h3>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="{% static 'img/carsoul_2.jpg' %}" alt="Chicago" class="d-block" style="width:100%;height: 500px;">
+                  <div class="carousel-caption">
+                      <h3>Turn Black Friday into a brighter future</h3>
+                  </div> 
+              </div>
+              <div class="carousel-item">
+                  <img src="{% static 'img/carosel_1.jpg' %}" alt="New York" class="d-block" style="width:100%;height: 500px;">
+                  <div class="carousel-caption">
+                      <h3>Accelerate growth — for you or your organization</h3>
+                  </div>  
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+          </button>
+      </div>
+          
+      </div>
+
+      <div class="container-fluid hero-section" >
+        <div class="row w-100 mx-4">
+            <!-- Left Content -->
+            <div class="col-md-6 hero-content text-center text-md-start px-5" style="padding-top: 200px;">
+                <h1>Join Us Today</h1>
+                <p>Start your journey towards a successful tech career by joining our empowering community.</p>
+                <a href="contact" class="btn btn-primary">Get Started</a>
+            </div>
+    
+            <!-- Right Image -->
+            <div class="col-md-3 hero-image ">
+                <img src="{% static 'img/network.jpg' %}" alt="Solopreneur">
+                <img src="{% static 'img/carosel.jpg' %}" alt="Solopreneur">
+            </div>
+            <div class="col-md-3 hero-image ">
+                <img src="{% static 'img/DevOps.jpg' %}" alt="Solopreneur">
+                <img src="{% static 'img/carsoul-4.jpg' %}" alt="Solopreneur">
+            </div>
+        </div>
+    </div>
+    
+      <footer class="bg-dark text-light pt-5 mt-3" style="font-size: 15px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6>SUPPORT</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="courses" >Courses</a></li>
+                        <li><a href="courses" >Full Stack Web Development</a></li>
+                        <li><a href="courses" >Cyber Security</a></li>
+                        <li><a href="courses" >Networking</a></li>
+                        <li><a href="courses" >DevOps</a></li>
+                        <li><a href="courses" >UI/UX</a></li>
+                        <li><a href="courses" >Flutter </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>FAQs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="" >My Account</a></li>
+                        <li><a href="" >Exchange&Return Policy</a></li>
+                        <li><a href="" >Privacy Policy</a></li>
+                        <li><a href="" >Terms&Conditions</a></li>
+                        <li><a href="" >Sneakers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Get in Touch</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" >Company</a></li>
+                    <li><a href="#" >Erankulam</a></li>
+                    <li><a href="#" >Kochi</a></li>
+                    <li><a href="#" ></a></li>
+                    <li><a href="#" >Email:</a></li>
+                    <li><a href="#" >synnefo@gmail.com</a></li>
+                    <li><a href="#" >Contact no:</a></li>
+                    <li><a href="#" >+91 11111111</a></li>
+                    <li><a href="#" ></a></li>
+                </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>STAY UP TO DATE</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Sign up for Email</a></li>
+                        <br>
+                    <h6>EXPLORE</h6>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <br>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
